@@ -1,0 +1,33 @@
+<div style="margin-top:50px" class="jumbotron">
+<center> 
+
+<% if @third_step.count < 1 %>
+  <p> Retente ta chance ! Retourne vers la home bg.</p>
+            <%= link_to "BACK TO L'ACCUEIL", root_path %>
+
+  <% else %>
+  <h1>Here it is.</h1>
+<table>
+      <thead>
+        <tr>
+          <th>Nom du film</th>
+          <th>Date de sortie</th>
+          <th>Affiche</th>
+          <th>Prod.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @third_step.each do |fourth_step| %>
+        <tr>
+          <td><%= @b = fourth_step.title %></td>
+          <td><%= fourth_step.release_date %></td>
+          <td><img src="http://image.tmdb.org/t/p/w185/<%=fourth_step.backdrop_path%>"</td>
+          <td><%= @c.name %></td>
+
+        </tr>
+        <% end %>
+      </tbody>
+    </table><% end %>
+</center>
+
+</div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ImdbAldo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <div class="navbar-header">
+          <%= link_to 'IMDBALDO', root_path, class: 'navbar-brand' %>
+        </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+         <% flash.each do |type, message| %>
+           <div class="alert alert-dismissible alert-primary"><%= message %>
+           </div>
+         <% end %>
+
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<div style="margin-top:50px" class="jumbotron">
+<center><h1>Quel film t'intéresse ?</h1> 
+</br><h2>ENGLISH PLEASE.</h2></br><%= form_tag("/lookout", :method => 'get') do %>
+  <%= text_field_tag "search" %></br>
+  <%= submit_tag("Search") %>
+<% end %></center>
+
+</div>
